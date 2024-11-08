@@ -6,7 +6,9 @@ import About from './pages/About'
 import Contact from './pages/ContactUs'
 import Myprofile from './pages/Myprofile'
 import Myappointment from './pages/Myappointment'
+import Register from "./pages/Register";
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
 				<Route path="/" element={<Home />} />
 				<Route path="/doctors" element={<Doctor />} />
 				<Route path="/doctors/:speciality" element={<Doctor />} />
+				<Route path="/register" element={<Register />} />
 				<Route path="/login" element={<Login />} />
 				<Route path="/about" element={<About/>}/>
 				<Route path="/contact" element={<Contact/>} />
@@ -24,6 +27,7 @@ function App() {
 				<Route path="/myAppointment" element={<Myappointment/>} />
 				<Route path="/myAppointment/:docId" element={<Myappointment />} />
 			</Routes>
+			<Footer/>
 		</>
 	);
 }
