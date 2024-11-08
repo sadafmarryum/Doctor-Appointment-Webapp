@@ -1,22 +1,22 @@
 export const question = [
  {
   id: 1,
-  ques: "Popular Articles",
-  anws: "According to the dissemination plans by ONS, 2021 census flow data are expected to be released in 2023. However, because of National Records of Scotland's decision to postpone census to 2022 due to the Covid-19 crisis, the first batches of 2021 census data are not expected to be UK wide. The arising issues and mitigation methods to harmonise data across all agencies are currently being discussed."
+  ques: "What is your medical care?",
+  anws: "We offer comprehensive medical care, focusing on preventative health, disease management, and personalized treatment plans to ensure optimal health outcomes."
  },
  {
   id: 2,
-  ques: "How much does a new website cost?",
-  anws: "You can approach a website designer (Freelancer) or contact a website development agency, or you can try developing a website on your own using some well-performing website builders. Depending on the requirements and the method you choose to build your website, the cost keeps varying."
+  ques: "Can I visit your medical office?",
+  anws: "Yes, you can visit our medical office for consultations, check-ups, and specialized treatments with our expert team of healthcare professionals."
  },
  {
   id: 3,
-  ques: " Will you maintain my site for me?",
-  anws: "Regular maintenance is essential for a website to stabilize its flexibility and reliability. Proper maintenance would help in ensuring your website’s security, invite new visitors, boost traffic and more."
+  ques: "Do you provide urgent care?",
+  anws: "We provide urgent care for non-life-threatening conditions, offering prompt and efficient treatment when you need it most."
  },
  {
   id: 4,
-  ques: "How long does it take to build a website?",
-  anws: "If you have chosen a professional website development company, then it would take around 1 to 4 months starting from scratch till the end for basic information websites with less functionality."
+  ques: "What happens if I need to go to the hospital?",
+  anws: "If hospitalization is required, we will coordinate with trusted hospitals to ensure you receive the best care and continued support throughout your treatment."
  },
 ]

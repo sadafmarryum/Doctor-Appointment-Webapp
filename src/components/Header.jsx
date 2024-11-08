@@ -1,9 +1,7 @@
-import React from 'react'
-import '../css/Header.css'
-import { Link } from 'react-router-dom'
-// import {assets} from '../assets'
-// import {img1} from '../assets';
-import logo from '../assets/headerLogo.png';
+import React from 'react';
+import '../css/Header.css';
+import { Link } from 'react-router-dom';
+import logo from '../assets/homepg/headerLogo.png';
 
 
 const Header = () => {
