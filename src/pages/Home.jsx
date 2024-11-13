@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import { Link } from 'react-router-dom';
 import '../css/Home.css';
 import { question } from '../data/FAQ';
+import Footer from '../components/Footer'
 import BL from '../assets/homepg/banner-l-img.jpg'
 import BR1 from '../assets/homepg/banner-r-img1.jpeg';
 import BR2 from '../assets/homepg/banner-r-img2.jpeg';
@@ -39,7 +40,7 @@ const Home = () => {
       <div className='banner-content'>
        <h1>We help patients live a healthy,<br />longer life</h1>
        <p>We empower patients to live longer, healthier lives through comprehensive care, preventative solutions, and personalized support, focusing on wellness and lifestyle optimization for thriving health at every stage</p>
-       <button><Link to="/myAppointment" className='link'>Request an Appointment</Link></button>
+       <button><Link to="/doctors" className='link'>Request an Appointment</Link></button>
       </div>
       <div className='banner-ratio'>
        <div id='ratio-1'>
@@ -202,7 +203,7 @@ const Home = () => {
         <div className='sec5-img-container'>
          <img src={S5PS} alt="sec5-img" />
          <div>
-          <h4>Muhmmad Waqas Ali</h4>
+          <h4> Waqas Ali</h4>
           <img src={S5St} alt="stars" id="sec5-stars" />
          </div>
         </div>
@@ -212,7 +213,7 @@ const Home = () => {
         <div className='sec5-img-container'>
          <img src={S5PS} alt="sec5-img" />
          <div>
-          <h4>Muhmmad Safdar Hussan</h4>
+          <h4> Safdar Hussan</h4>
           <img src={S5St} alt="stars" id="sec5-stars" />
          </div>
         </div>
@@ -222,11 +223,11 @@ const Home = () => {
         <div className='sec5-img-container'>
          <img src={S5PS} alt="sec5-img" />
          <div>
-          <h4>Muhmmad Hanzala</h4>
+          <h4>Hanzala Javed</h4>
           <img src={S5St} alt="stars" id="sec5-stars" />
          </div>
         </div>
-        <p>The doctor’s care was exceptional. They went above and beyond to ensure I understood my options and felt supported throughout my treatment.</p>
+        <p>The doctor’s care was exceptional. I understood my options and felt supported throughout my treatment.</p>
        </div>
 
       </Slider>
@@ -234,6 +235,7 @@ const Home = () => {
     </div>
 
    </div>
+   <Footer />
   </>
  )
 }

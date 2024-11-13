@@ -63,6 +63,9 @@
  padding: 40px
 }
 
+.chooseUs-content:hover {
+  background-color: #e2e5ff;
+}
 .chooseUs-content b {
  text-transform: uppercase;
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../css/Doctor.css';
+import Footer from '../components/Footer'
 import { doctorsCards } from '../data/doctorsCards';
 import { placeholders } from '../data/doctorsCards';
 import { Link } from 'react-router-dom';
@@ -10,7 +11,7 @@ const Doctor = () => {
  const [filteredDoctors, setFilteredDoctors] = useState(doctorsCards);
 
  const filterData = (placeholder) => {
-  const filtered = doctorsCards.filter(doctor => doctor.specialist === placeholder || placeholder == "All doctors");
+  const filtered = doctorsCards.filter(doctor => doctor.specialist === placeholder || placeholder === "All doctors");
   setFilteredDoctors(filtered);
  };
 
@@ -34,7 +35,7 @@ const Doctor = () => {
          <>
           <div className="doctor-card" key={i} >
            <div className="card-img" >
-            <Link to="/myAppointment" className='link'> <img src={doctor.image} alt="doc-img" /></Link>
+            <Link to={`/myAppointment/${doctor.docId}`}  className='link'> <img src={doctor.image} alt="doc-img" /></Link>
            </div>
            <div className="card-content">
             <p id='green'>{doctor.available}</p>
@@ -49,7 +50,7 @@ const Doctor = () => {
      </div>
     </div>
    </div>
-
+   <Footer />
   </>
  )
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/About.css';
+import Footer from '../components/Footer'
 import { about } from '../data/aboutus';
 import AI from '../assets/about_image.png';
 
@@ -38,6 +39,7 @@ const About = () => {
      </div>
     </div>
    </div>
+   <Footer />
   </>
  )
 }
