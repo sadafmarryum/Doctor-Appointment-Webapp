@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/Contact.css';
+import Footer from '../components/Footer'
 import CI from '../assets/contact_image.png';
 const ContactUs = () => {
   return (
@@ -28,7 +29,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-
+      <Footer />
     </>
   )
 }
