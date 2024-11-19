@@ -18,10 +18,10 @@ const Footer = () => {
       <p>Lorem ipsum dolor sit amet consectetur adipisicing Nihil  elit.  distinctio harum dolorum vitae beatae
        ut, totam ullam dolorem  architecto veritatis rerum nesciunt?  </p>
       <div className="container-logo">
-       <a href="https://www.facebook.com/" target='_blank'><img src={face} alt="logo" /></a> 
-       <a href="https://www.gmail.com/" target='_blank'> <img src={email} alt="logo" /></a> 
-       <a href="https://www.LinkedIn.com/" target='_blank'><img src={linkedin} alt="logo" /></a> 
-      <a href="https://www.twitter.com/" target='_blank'> <img src={twitter} alt="logo" /></a> 
+       <a href="https://www.facebook.com/" target='_blank' rel="noopener noreferrer"><img src={face} alt="logo" /></a> 
+       <a href="https://www.gmail.com/" target='_blank' rel="noopener noreferrer"> <img src={email} alt="logo" /></a> 
+       <a href="https://www.LinkedIn.com/" target='_blank' rel="noopener noreferrer"><img src={linkedin} alt="logo" /></a> 
+      <a href="https://www.twitter.com/" target='_blank' rel="noopener noreferrer"> <img src={twitter} alt="logo" /></a> 
       </div>
      </div>
      <div className="personal-info">
@@ -45,6 +45,7 @@ const Footer = () => {
 
      </div>
     </div>
+    
     <div className="footer">
      <hr />
      <p>Copyright &copy; 2024 HH Ltd.All right reserved</p>

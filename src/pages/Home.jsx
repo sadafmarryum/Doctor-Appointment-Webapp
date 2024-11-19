@@ -6,7 +6,6 @@ import Slider from "react-slick";
 import { Link } from 'react-router-dom';
 import '../css/Home.css';
 import { question } from '../data/FAQ';
-import Footer from '../components/Footer'
 import BL from '../assets/homepg/banner-l-img.jpg'
 import BR1 from '../assets/homepg/banner-r-img1.jpeg';
 import BR2 from '../assets/homepg/banner-r-img2.jpeg';
@@ -152,7 +151,7 @@ const Home = () => {
       <div className="sec4-faq-content">
        {question.map((faqItems, i) => {
         return (
-         <div className="sec4-faqItems">
+         <div className="sec4-faqItems" key={i}>
           <h3 onClick={() => setshowans(faqItems.id)}>{faqItems.ques}</h3>
           <p className={showans === faqItems.id ? "activeAns" : ""}>{faqItems.anws}</p>
          </div>
@@ -235,7 +234,7 @@ const Home = () => {
     </div>
 
    </div>
-   <Footer />
+  
   </>
  )
 }

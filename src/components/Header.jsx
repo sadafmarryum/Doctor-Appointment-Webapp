@@ -1,18 +1,40 @@
 import React, { useState } from 'react';
 import '../css/Header.css';
-import { Link } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import logo from '../assets/homepg/headerLogo.png';
-import HPP from '../assets/homepg/header-profile-pic.png';
-import DD from '../assets/homepg/dropdown-icon.svg';
+import PP from '../assets/homepg/header-profile-pic.jpg';
+
 
 const Header = () => {
+ const location = useLocation();
+ const [user, setuser] = useState(location.state ? location.state.user  : null);
 
- let [token, settoken] = useState(true);
-
+ let handleLogout = async  () => {
+  // if (user && user.email) {
+  //  try {
+  //   const res = await fetch(`http://localhost:8009/user/${user.email}`, {
+  //    method: 'DELETE',
+  //    headers: {
+  //     'Content-Type': 'application/json',
+  //    },
+  //   });
+  //   if (res.ok) {
+     setuser(null);
+  //   } 
+  //   else {
+  //    alert("Failed to logout. Please try again.");
+  //   }
+  //  } 
+  //  catch (error) {
+  //   console.error("Error occurred while logging out:", error);
+  //  }
+  // }
+ }
  return (
   <>
    <div className='header-container'>
-    <div className='header-logo'><img src={logo} alt="health-icon" />
+    <div className='header-logo'>
+     <img src={logo} alt="health-icon" />
      <h2>Health-Hub</h2>
     </div>
     <div className='header-list'>
@@ -24,25 +46,25 @@ const Header = () => {
      </ul>
     </div>
 
-    <div>
-     {
-      token
-       ? <div className='dropdown'>
-        <img src={HPP} alt="profile-pic" id='profile-pic' />
-        <img src={DD} alt="dropdown-arrow" id='dropdown-arrow' />
-        <div class="dropdown-content">
-         <li><Link to="/myProfile" className='link'>My Profile</Link></li>
-         <li><Link to="/userappointment" className='link'>My Appointment</Link></li>
-         <li onClick={() => settoken(false)}>Logout</li>
-        </div>
-       </div>
-       :
-       <button><Link to="/login" className='link'>Create account</Link>
-       </button>
-     }
-    </div>
+    { user ? (
+     <div className="dropdown">
+      <div className='profile'>
+       <img src={PP} id='profile-pic' alt="User Profile" />
+       <h4>{user.name}</h4>
+      </div>
+      <div className='dropdown-content'>
+       <ul >
+        <li><Link to="/personalinfo" className='link'>Profile</Link></li>
+        <li><Link to="/userappointment" className='link'>My Appointment</Link></li>
+        <li onClick={handleLogout}>Logout</li>
+       </ul>
+      </div>
+     </div>
+    )
+     : (
+      <button><Link to="/register" className='link'>Create account</Link></button>
+     )}
    </div>
-
   </>
  )
 }

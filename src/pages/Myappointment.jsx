@@ -1,6 +1,5 @@
 import React from 'react'
 import '../css/Myappointment.css'
-import Footer from '../components/Footer'
 import { useParams } from 'react-router-dom'
 import { doctorsCards } from '../data/doctorsCards';
 
@@ -28,7 +27,6 @@ const Myappointment = () => {
      <button>Book an appointment</button>
     </div>
    </div>
-   <Footer />
   </>
  )
 }

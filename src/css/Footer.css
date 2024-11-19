@@ -4,6 +4,7 @@
  box-sizing: border-box;
 }
 .footer-parent {
+  width: 100%;
  display: flex;
  flex-direction: column;
  justify-content: center;
@@ -75,10 +76,13 @@
 }
 
 .footer {
- width: 80%;
- margin: 2rem 0rem;
+ width: 100%;
+ margin-top: 2rem ;
 }
-
+.footer p{
+  margin-left: 6rem;
+  padding-bottom: 10px;
+}
 hr {
  margin-bottom: 0.6rem;
 }

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../css/Doctor.css';
-import Footer from '../components/Footer'
 import { doctorsCards } from '../data/doctorsCards';
 import { placeholders } from '../data/doctorsCards';
 import { Link } from 'react-router-dom';
@@ -50,7 +49,7 @@ const Doctor = () => {
      </div>
     </div>
    </div>
-   <Footer />
+ 
   </>
  )
 }
